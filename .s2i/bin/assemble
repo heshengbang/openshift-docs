@@ -18,7 +18,7 @@ mv /tmp/src/* ./
 echo "---> Fetching remote branches"
 # Because the s2i builder only makes the remote branch applicable to the specified branch,
 # it's necessary to enforce a * ref so that all branches are referenced
-sed -i 's%fetch = +refs.*%fetch = +refs/heads/*:refs/remotes/origin/*%' config
+sed -i 's%fetch = +refs.*%fetch = +refs/heads/*:refs/remotes/origin/*%' ~/Develop/github/openshift-docs/config
 git fetch --all --quiet
 for remote in $(git branch -r | egrep -v "(>|$(git rev-parse --abbrev-ref HEAD))|master"); do git checkout --force --track $remote; done
 git checkout master
