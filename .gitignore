@@ -2,7 +2,6 @@ Gemfile.lock
 *.swp
 .asciidoctor
 _package
-_preview
 drupal-build
 architecture/core_concepts/images/docker-diagram.png
 architecture/core_concepts/images/docker-diagram.png.cache
